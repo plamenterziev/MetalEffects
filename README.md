@@ -9,7 +9,7 @@ This framework provides out of the box effects for your iOS app or game. The fra
 - [x] Confetti effect
 
 <p align="left" >
-  <img src="confetti.jpg" title="Confetti" float=left>
+  <img src="confetti.png" title="Confetti" float=left>
 </p>
 
 ## Requirements
