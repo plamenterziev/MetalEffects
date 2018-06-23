@@ -63,7 +63,7 @@ Clone the repository and link the MetalEffects.xcodeproj as subproject (see the 
 
 ## Showcase
 
-This framework is used in [Solitaire The Game](https://itunes.apple.com/us/app/solitaire-the-game/id1251359095?mt=8) which is featured in the article [World of Solitaire](https://topgamescenter.com/world-of-solitaire/) of [TopGamesCenter](https://topgamescenter.com)
+This framework is used in [Solitaire The Game](https://itunes.apple.com/us/app/solitaire-the-game/id1251359095?mt=8) distributed by [Mobishape](https://mobishape.com) which is featured in the article [World of Solitaire](https://topgamescenter.com/world-of-solitaire/) of [TopGamesCenter](https://topgamescenter.com)
 
 ## TODO
 
