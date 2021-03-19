@@ -21,8 +21,8 @@ typedef struct
     float2 uv;
 } RasterizerData;
 
-vertex RasterizerData vertexShader(device ConfettiVertex *vertices [[ buffer(0) ]],
-                                   device PerInstanceUniforms *perInstanceUniforms [[ buffer(1) ]],
+vertex RasterizerData vertexShader(const device ConfettiVertex *vertices [[ buffer(0) ]],
+                                   const device PerInstanceUniforms *perInstanceUniforms [[ buffer(1) ]],
                                    constant Uniforms& uniforms [[ buffer(2) ]],
                                    uint vertexID [[ vertex_id ]],
                                    uint instanceID [[ instance_id ]]) {

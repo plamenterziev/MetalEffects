@@ -113,7 +113,7 @@ public class EffectsManager {
             }
         }
         self.timer = CADisplayLink(target: WeakContainer(parent: self), selector: #selector(WeakContainer.timerDidFire))        
-        self.timer?.add(to: .main, forMode: .commonModes)
+        self.timer?.add(to: .main, forMode: RunLoop.Mode.common)
         
         switch effectType {
         case .confetti(let configuration):
