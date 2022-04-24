@@ -37,25 +37,9 @@ effectsManager.show(effectType: .confetti(configuration: .default)) { result in
 
 ## Instalation
 
-There are two ways to use MetalEffects in your project:
-- using Carthage
-- manual by cloning the project into your repository
+MetalEffects usese Swift Package Manager.
 
-
-### Installation with Carthage (iOS 8+)
-
-[Carthage](https://github.com/Carthage/Carthage) is a lightweight dependency manager for Swift and Objective-C. It leverages CocoaTouch modules and is less invasive than CocoaPods.
-
-To install with carthage, follow the instruction on [Carthage](https://github.com/Carthage/Carthage)
-
-#### Cartfile
-```
-github "plamenterziev/MetalEffects"
-```
-
-### Installation by cloning the repository
-
-Clone the repository and link the MetalEffects.xcodeproj as subproject (see the Example app)
+```https://github.com/plamenterziev/MetalEffects```
 
 ## Author
 
@@ -68,3 +52,4 @@ This framework is used in [Solitaire The Game](https://itunes.apple.com/us/app/s
 ## TODO
 
 - Add more effects
+

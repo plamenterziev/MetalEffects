@@ -26,7 +26,7 @@ typedef struct {
     simd::float3 rotation; // yaw, pitch, roll
     float timeOffset;
     float acceleration;
-    float initialVelocity;    
+    float initialVelocity;
 } PerInstanceUniforms;
 
 typedef struct {

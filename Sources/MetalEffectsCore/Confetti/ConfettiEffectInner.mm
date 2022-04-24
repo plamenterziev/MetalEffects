@@ -73,7 +73,7 @@ static const long kInFlightCommandBuffers = 3;
     MTLRenderPipelineDescriptor *pipelineStateDescriptor = [MTLRenderPipelineDescriptor new];
     pipelineStateDescriptor.vertexFunction = [library newFunctionWithName:@"vertexShader"];
     pipelineStateDescriptor.fragmentFunction = [library newFunctionWithName:@"fragmentShader"];
-    pipelineStateDescriptor.colorAttachments[0].pixelFormat = MTLPixelFormatBGRA8Unorm;    
+    pipelineStateDescriptor.colorAttachments[0].pixelFormat = MTLPixelFormatBGRA8Unorm;
     
     self.pipelineState = [self.device newRenderPipelineStateWithDescriptor:pipelineStateDescriptor error:NULL];
     
@@ -98,7 +98,7 @@ static const long kInFlightCommandBuffers = 3;
         elapsedTime = CACurrentMediaTime() - self.startingTimeInterval;
     }
     
-    Uniforms *bufferPointer = (Uniforms *) self.uniformsBuffer.contents;    
+    Uniforms *bufferPointer = (Uniforms *) self.uniformsBuffer.contents;
     bufferPointer->t = elapsedTime;
 }
 
@@ -211,7 +211,7 @@ static const long kInFlightCommandBuffers = 3;
         }
     }
     
-    self.comletionTimeInterval = completionTime;    
+    self.comletionTimeInterval = completionTime;
     
     self.perInstanceUniformsBuffer = [self.device newBufferWithLength:instanceData.length options:MTLResourceStorageModeShared];
     memcpy(self.perInstanceUniformsBuffer.contents, instanceData.bytes, instanceData.length);
@@ -219,7 +219,7 @@ static const long kInFlightCommandBuffers = 3;
 
 - (void)updateWithSize:(CGSize)size {
     Uniforms* bufferPointer = (Uniforms *) self.uniformsBuffer.contents;
-    bufferPointer->viewSize = {(float)size.width, (float)size.height};
+    bufferPointer->viewSize = {(float)size.width, (float)size.height};    
     
     [self build:size];
 }

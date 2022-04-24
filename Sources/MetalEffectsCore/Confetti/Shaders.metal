@@ -34,7 +34,7 @@ vertex RasterizerData vertexShader(const device ConfettiVertex *vertices [[ buff
     position.xy *= instanceUniforms.size;
     out.uv = position.xy;
     float3 rotation = instanceUniforms.rotation;
-    rotation *= uniforms.t;    
+    rotation *= uniforms.t;
     
     float cosA;
     float cosB;
@@ -51,14 +51,14 @@ vertex RasterizerData vertexShader(const device ConfettiVertex *vertices [[ buff
 
     position *= rotationMatrix;
     position += instanceUniforms.translation;
-    float time = max(0.0f, uniforms.t - instanceUniforms.timeOffset);    
+    float time = max(0.0f, uniforms.t - instanceUniforms.timeOffset);
     float v0 = instanceUniforms.initialVelocity;
     position.y -= (v0 * time + 0.5f * instanceUniforms.acceleration * time * time);
     position.z = 0.5;
     position.xy /= (uniforms.viewSize * 0.5);
     
     out.clipSpacePosition = float4(position, 1);
-    out.color = instanceUniforms.color;    
+    out.color = instanceUniforms.color;
     
     return out;
 }
@@ -66,5 +66,3 @@ vertex RasterizerData vertexShader(const device ConfettiVertex *vertices [[ buff
 fragment float4 fragmentShader(RasterizerData in [[stage_in]]) {
     return in.color;
 }
-
-

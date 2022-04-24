@@ -1,4 +1,0 @@
-module MetalEffectsPrivate {  
-  header "../Confetti/ConfettiEffectInner.h"
-  export *
-}

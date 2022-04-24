@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol MetalViewDelegate: class {
+protocol MetalViewDelegate: AnyObject {
     func metalView(sender: MetalView, didChangeSizeTo size: CGSize)
 }
 

@@ -19,7 +19,7 @@ protocol Effect {
     func dispose(commandQueue: MTLCommandQueue,  metalView: MetalView)
 }
 
-public protocol EffectsManagerDelegate: class {
+public protocol EffectsManagerDelegate: AnyObject {
     
     func effectsManagerDidTapView(_ sender: EffectsManager)
 }
@@ -112,7 +112,7 @@ public class EffectsManager {
                 self.parent?.timerDidFire()
             }
         }
-        self.timer = CADisplayLink(target: WeakContainer(parent: self), selector: #selector(WeakContainer.timerDidFire))        
+        self.timer = CADisplayLink(target: WeakContainer(parent: self), selector: #selector(WeakContainer.timerDidFire))
         self.timer?.add(to: .main, forMode: RunLoop.Mode.common)
         
         switch effectType {
@@ -170,7 +170,7 @@ public class EffectsManager {
         self.effect = nil
         
         let completionHandler = self.completionHandler
-        self.completionHandler = nil        
+        self.completionHandler = nil
         completionHandler?(result)
     }
 }

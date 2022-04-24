@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import MetalEffectsPrivate
+import MetalEffectsCore
 
 public class ConfettiEffect: Effect {
 
@@ -76,7 +76,7 @@ public class ConfettiEffect: Effect {
         self.effect.update()
     }
     
-    func render(commandQueue: MTLCommandQueue, metalView: MetalView) {        
+    func render(commandQueue: MTLCommandQueue, metalView: MetalView) {
         self.effect.render(with: commandQueue, drawable: metalView.nextDrawable())
     }
     
