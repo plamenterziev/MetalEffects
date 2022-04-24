@@ -10,7 +10,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "MetalEffects",
-            targets: ["MetalEffectsCore", "MetalEffectsSwift"]),
+            targets: ["MetalEffectsCore", "MetalEffects"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -23,9 +23,9 @@ let package = Package(
             name: "MetalEffectsCore",
             path: "Sources/MetalEffectsCore"),
         .target(
-            name: "MetalEffectsSwift",
+            name: "MetalEffects",
             dependencies: ["MetalEffectsCore"],
-            path: "Sources/MetalEffectsSwift"),
+            path: "Sources/MetalEffects"),
     ],
     cxxLanguageStandard: .cxx17
 )
