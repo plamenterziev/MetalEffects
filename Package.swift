@@ -25,7 +25,8 @@ let package = Package(
         .target(
             name: "MetalEffects",
             dependencies: ["MetalEffectsCore"],
-            path: "Sources/MetalEffects"),
+            path: "Sources/MetalEffects",
+            resources: [.copy("../Shaders")]),
     ],
     cxxLanguageStandard: .cxx17
 )
