@@ -10,7 +10,7 @@
 #include <simd/simd.h>
 using namespace metal;
 
-#import "ConfettiShaderTypes.h"
+#import "../Confetti/ConfettiShaderTypes.h"
 
 typedef struct
 {

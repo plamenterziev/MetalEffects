@@ -66,9 +66,8 @@ static const long kInFlightCommandBuffers = 3;
     
     //[self build:viewSize];
     [self updateWithSize:viewSize];
-    
-    NSString *libraryPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"default" ofType:@"metallib"];
-    id<MTLLibrary> library = [self.device newLibraryWithFile:libraryPath error:NULL];
+        
+    id<MTLLibrary> library = [self.device newDefaultLibraryWithBundle:SWIFTPM_MODULE_BUNDLE error:NULL];
     
     MTLRenderPipelineDescriptor *pipelineStateDescriptor = [MTLRenderPipelineDescriptor new];
     pipelineStateDescriptor.vertexFunction = [library newFunctionWithName:@"vertexShader"];

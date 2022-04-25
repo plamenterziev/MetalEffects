@@ -21,12 +21,13 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "MetalEffectsCore",
-            path: "Sources/MetalEffectsCore"),
+            path: "Sources/MetalEffectsCore",
+            //resources: [.copy("../Shaders")]),
+            resources: [.process("Shaders/Shaders.metal")]),
         .target(
             name: "MetalEffects",
             dependencies: ["MetalEffectsCore"],
-            path: "Sources/MetalEffects",
-            resources: [.copy("../Shaders")]),
+            path: "Sources/MetalEffects"),
     ],
     cxxLanguageStandard: .cxx17
 )
